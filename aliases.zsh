@@ -17,6 +17,10 @@ alias tinker="php artisan tinker"
 alias seed="php artisan db:seed"
 alias serve="php artisan serve"
 
+# Codeception
+alias c="./vendor/bin/codecept"
+alias cr="clear && c clean && c run"
+
 # PHP
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
 
