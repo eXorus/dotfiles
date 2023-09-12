@@ -29,12 +29,16 @@ alias docker-composer="docker-compose"
 
 # Git
 alias gs="git status"
+alias ga="git add"
 alias gaa="git add ."
+alias gcm="git checkout main"
 alias gcb="git checkout -b"
 alias gco="git checkout"
 alias gc="git commit -m"
 alias gpf="git push --force-with-lease"
-alias diff="git diff"
+alias gd="git diff"
+alias gda="git diff ."
 alias nah="git reset --hard;git clean -df;"
 alias gl="git pull"
 alias gp="git push"
+
