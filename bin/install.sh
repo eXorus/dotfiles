@@ -44,3 +44,7 @@ fi
 if ask "Do you want to configure ZSH (aliases, paths,)"; then
     $HOME/.dotfiles/bin/configure_zsh.sh
 fi
+
+
+source $HOME/.dotfiles/.macos
+
