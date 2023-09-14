@@ -66,6 +66,18 @@ fi
 ring_bell
 wait_for_user
 
+local c
+echo
+echo "Press ${tty_bold}1${tty_reset}/${tty_bold}2${tty_reset} to continue or any other key to abort:"
+getc c
+# we test for \r and \n because some stuff does \r instead
+if [[ "${c}" == $'1' || "${c}" == $'2' ]]
+then
+  abort "1 and 2 pressed."
+else
+  abort "not pressed"
+fi
+
 //generate SSH Key
 //wait for key copied in github
 //clone dotfiles repository with git
