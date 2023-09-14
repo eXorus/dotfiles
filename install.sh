@@ -54,14 +54,6 @@ wait_for_user() {
   fi
 }
 
-ask() {
-    read -p "$1 [Yes/No]: " response
-    case "$response" in
-        [yY]|[yY][eE][sS]) return 0 ;;
-        *) return 1 ;;
-    esac
-}
-
 # First check OS.
 OS="$(uname)"
 if [[ "${OS}" == "Darwin" ]]
@@ -73,30 +65,37 @@ fi
 
 # ##############
 
-if ask "generate ssk key?";
-then
-  abort "yes I want"
-else
-  abort "no I don't"
-fi
+# Fonction pour poser la question
+ask() {
+    read -p "$1 [Yes/No]: " response
+    case "$response" in
+        [yY]|[yY][eE][sS]) return 0 ;;
+        *) return 1 ;;
+    esac
+}
 
+# Fonction à exécuter si la réponse est "Yes"
+yes_function() {
+    echo "La réponse est Yes. J'exécute la fonction 'yes_function'."
+}
+
+# Fonction à exécuter si la réponse est "No"
+no_function() {
+    echo "La réponse est No. J'exécute la fonction 'no_function'."
+}
+
+# Poser la question
+if ask "Voulez-vous continuer ?"; then
+    yes_function
+else
+    no_function
+fi
 
 # ##############
 
-ring_bell
-wait_for_user
+#ring_bell
+#wait_for_user
 
-local c
-echo
-echo "Press ${tty_bold}1${tty_reset}/${tty_bold}2${tty_reset} to continue or any other key to abort:"
-getc c
-# we test for \r and \n because some stuff does \r instead
-if [[ "${c}" == $'1' || "${c}" == $'2' ]]
-then
-  abort "1 and 2 pressed."
-else
-  abort "not pressed"
-fi
 
 //generate SSH Key
 //wait for key copied in github
