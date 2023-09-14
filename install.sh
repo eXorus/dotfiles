@@ -79,7 +79,7 @@ fi
 
 # ##############
 
-if [[ ask "Do you want to install a new ssh key?" ]]
+if ask "Do you want to install a new ssh key?"
 then
   abort "yes I want"
 else
