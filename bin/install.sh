@@ -42,5 +42,5 @@ if ask "Do you want to clone the repositories?"; then
 fi
 
 if ask "Do you want to configure ZSH (aliases, paths,)"; then
-    $HOME/.dotfiles/bin/clone_repositories.sh
+    $HOME/.dotfiles/bin/configure_zsh.sh
 fi
