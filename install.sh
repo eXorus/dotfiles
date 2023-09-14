@@ -25,6 +25,15 @@ tty_red="$(tty_mkbold 31)"
 tty_bold="$(tty_mkbold 39)"
 tty_reset="$(tty_escape 0)"
 
+
+getc() {
+  local save_state
+  save_state="$(/bin/stty -g)"
+  /bin/stty raw -echo
+  IFS='' read -r -n 1 -d '' "$@"
+  /bin/stty "${save_state}"
+}
+
 ring_bell() {
   # Use the shell's audible bell.
   if [[ -t 1 ]]
@@ -43,14 +52,6 @@ wait_for_user() {
   then
     exit 1
   fi
-}
-
-getc() {
-  local save_state
-  save_state="$(/bin/stty -g)"
-  /bin/stty raw -echo
-  IFS='' read -r -n 1 -d '' "$@"
-  /bin/stty "${save_state}"
 }
 
 # First check OS.
