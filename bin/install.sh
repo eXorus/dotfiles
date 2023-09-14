@@ -36,3 +36,7 @@ fi
 if ask "Do you want to install oh my ssh?"; then
     $HOME/.dotfiles/bin/install_omz.sh
 fi
+
+if ask "Do you want to clone the repositories?"; then
+    $HOME/.dotfiles/bin/clone_repositories.sh
+fi
