@@ -67,6 +67,7 @@ fi
 
 # Fonction pour poser la question
 ask() {
+    ring_bell
     read -p "$1 [Yes/No]: " response
     case "$response" in
         [yY]|[yY][eE][sS]) return 0 ;;
@@ -74,27 +75,44 @@ ask() {
     esac
 }
 
-# Fonction à exécuter si la réponse est "Yes"
-yes_function() {
-    echo "La réponse est Yes. J'exécute la fonction 'yes_function'."
+generate_ssh_key() {
+  echo "Generating a new SSH key for GitHub..."
+
+  # Generating a new SSH key
+  # https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key
+  ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519
+  
+  # Adding your SSH key to your GitHub account
+  # https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account
+  echo "Your SSH Key has been generated, here is the public key:"
+  cat ~/.ssh/id_ed25519.pub
+  
+  echo "Public SSH Key copied, paste that into GitHub"
+  pbcopy < ~/.ssh/id_ed25519.pub
+  
+  
+  echo 'Go to https://github.com/settings/keys and upload your new SSH key and clean the old one if needded'
 }
 
-# Fonction à exécuter si la réponse est "No"
-no_function() {
-    echo "La réponse est No. J'exécute la fonction 'no_function'."
+clone_dotfiles() {
+  echo "Cloning dotfiles repositories..."
+
+  git clone git@github.com:eXorus/dotfiles.git $HOME/.dotfiles2
+
 }
 
-# Poser la question
-if ask "Voulez-vous continuer ?"; then
-    yes_function
-else
-    no_function
+if ask "Should I generate a new SSH Key?"; then
+    generate_ssh_key
 fi
+
+
+if ask "When it's done I'm going to clone the dotfile repo, are you ready?"; then
+    clone_dotfiles
+fi
+
 
 # ##############
 
-#ring_bell
-#wait_for_user
 
 
 //generate SSH Key
