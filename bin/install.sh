@@ -32,3 +32,7 @@ if ask "Do you want to install homebrew?"; then
       $HOME/.dotfiles/bin/install_apps.sh
     fi
 fi
+
+if ask "Do you want to install oh my ssh?"; then
+    $HOME/.dotfiles/bin/install_omz.sh
+fi
