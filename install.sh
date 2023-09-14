@@ -54,6 +54,20 @@ wait_for_user() {
   fi
 }
 
+ask() {
+  local c
+  echo
+  echo "Press ${tty_bold}RETURN${tty_reset}/${tty_bold}ENTER${tty_reset} to continue or any other key to abort: (Y/N)"
+  getc c
+  # we test for \r and \n because some stuff does \r instead
+  if ! [[ "${c}" == $'Y' || "${c}" == $'y' ]]
+  then
+    exit 1
+  else
+    exit 0
+  fi
+}
+
 # First check OS.
 OS="$(uname)"
 if [[ "${OS}" == "Darwin" ]]
@@ -62,6 +76,18 @@ then
 else
   abort "Install is only supported on macOS."
 fi
+
+# ##############
+
+if [[ ask "Do you want to install a new ssh key?" ]]
+then
+  abort "yes I want"
+else
+  abort "no I don't"
+fi
+
+
+# ##############
 
 ring_bell
 wait_for_user
