@@ -18,5 +18,5 @@ ask() {
 }
 
 if ask "Should I generate a new SSH Key for GitHub?"; then
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/exorus/dotfiles/HEAD/generate_ssh_key.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/exorus/dotfiles/HEAD/bin/generate_ssh_key.sh)"
 fi
