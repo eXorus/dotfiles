@@ -20,3 +20,15 @@ ask() {
 if ask "Should I generate a new SSH Key for GitHub?"; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/exorus/dotfiles/HEAD/bin/generate_ssh_key.sh)"
 fi
+
+if ask "When it's done I'm going to clone the dotfile repo to prepare the setup"; then
+    git clone git@github.com:eXorus/dotfiles.git $HOME/.dotfiles
+fi
+
+if ask "Do you want to install homebrew?"; then
+    $HOME/.dotfiles/bin/install_homebrew.sh
+    
+    if ask "Do you want to install all the tools and apps defined in Brewfile (please check them before)?"; then
+      $HOME/.dotfiles/bin/install_apps.sh
+    fi
+fi
