@@ -55,17 +55,11 @@ wait_for_user() {
 }
 
 ask() {
-  local c
-  echo
-  echo "Press ${tty_bold}RETURN${tty_reset}/${tty_bold}ENTER${tty_reset} to continue or any other key to abort: (Y/N)"
-  getc c
-  # we test for \r and \n because some stuff does \r instead
-  if ! [[ "${c}" == $'Y' || "${c}" == $'y' ]]
-  then
-    exit 1
-  else
-    exit 0
-  fi
+    read -p "$1 [Yes/No]: " response
+    case "$response" in
+        [yY]|[yY][eE][sS]) return 0 ;;
+        *) return 1 ;;
+    esac
 }
 
 # First check OS.
@@ -79,7 +73,7 @@ fi
 
 # ##############
 
-if ask
+if ask "generate ssk key?";
 then
   abort "yes I want"
 else
