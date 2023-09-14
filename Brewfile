@@ -7,6 +7,7 @@ tap 'nicoverbruggen/homebrew-cask'
 
 # Binaries
 brew 'awscli'
+brew 'cloudflared'
 brew 'bash'
 brew 'coreutils'
 brew 'ffmpeg'
