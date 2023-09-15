@@ -8,7 +8,7 @@ alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 # Directories
 alias dotfiles="cd $DOTFILES"
 alias code="cd $HOME/Code"
-alias herd="cd $HOME/Herd"
+alias sites="cd $HOME/Herd"
 
 # Laravel
 alias a="php artisan"
