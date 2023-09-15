@@ -25,4 +25,6 @@ echo 'Go to https://github.com/settings/keys and upload your new SSH key and cle
 
 - Add your **public ssh key** on https://github.com/settings/keys
 
+Add your public ssh key on https://github.com/settings/keys
+
 '
