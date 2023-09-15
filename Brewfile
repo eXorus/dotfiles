@@ -28,9 +28,10 @@ cask 'github'
 cask 'herd'
 cask 'imageoptim'
 cask 'postman'
-cask 'phpstorm'
 cask 'tableplus'
 cask 'visual-studio-code'
+cask 'phpstorm'
+cask 'sublime-text'
 
 # Fonts
 cask 'font-lato'
