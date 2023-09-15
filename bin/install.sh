@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo $VAR1
+
 ring_bell() {
   # Use the shell's audible bell.
   if [[ -t 1 ]]
