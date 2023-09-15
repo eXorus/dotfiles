@@ -21,6 +21,10 @@ alias serve="php artisan serve"
 alias c="./vendor/bin/codecept"
 alias cr="clear && c clean && c run"
 
+# Cloudflare Access
+alias ot="$HOME/Code/wat/bin/open-tunnel"
+alias ct="$HOME/Code/wat/bin/close-tunnel"
+
 # PHP
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
 
