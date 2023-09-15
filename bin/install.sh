@@ -24,7 +24,7 @@ if ask "Should I generate a new SSH Key for GitHub?"; then
 fi
 
 if ask "When it's done I'm going to clone the dotfile repo to prepare the setup"; then
-    git clone git@github.com:eXorus/dotfiles.git $HOME/.dotfiles
+    git clone git@github.com:exorus/dotfiles.git $HOME/.dotfiles
 fi
 
 if ask "Do you want to install homebrew?"; then
