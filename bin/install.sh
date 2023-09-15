@@ -48,5 +48,5 @@ if ask "Do you want to configure ZSH (aliases, paths,)"; then
 fi
 
 
-source $HOME/.dotfiles/.macos
+# source $HOME/.dotfiles/.macos
 
