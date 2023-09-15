@@ -2,6 +2,9 @@
 
 echo "Generating a new SSH key for GitHub..."
 
+
+echo "You don't need to set a passphrase, but if you set it then do this to add it in your keychain automatically. https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"
+
 # Generating a new SSH key
 # https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key
 ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519
