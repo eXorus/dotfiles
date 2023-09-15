@@ -2,6 +2,8 @@
 
 echo "Cloning repositories..."
 
+git config --global push.default current
+
 CODE=$HOME/Code
 SITES=$HOME/Herd
 
