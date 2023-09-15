@@ -28,6 +28,7 @@ cask 'github'
 cask 'herd'
 cask 'imageoptim'
 cask 'postman'
+cask 'phpstorm'
 cask 'tableplus'
 cask 'visual-studio-code'
 
