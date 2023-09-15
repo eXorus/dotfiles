@@ -18,4 +18,11 @@ echo "Public SSH Key copied, paste that into GitHub"
 pbcopy < ~/.ssh/id_ed25519.pub
 
 
-echo 'Go to https://github.com/settings/keys and upload your new SSH key and clean the old one if needed'
+echo 'Go to https://github.com/settings/keys and upload your new SSH key and clean the old one if needed
+
+- Update your personal GitHub account settings to **enable Double Authentification** https://github.com/settings/security
+- Update your **GitHub account password** if you think it is not already secured enough
+
+- Add your **public ssh key** on https://github.com/settings/keys
+
+'
