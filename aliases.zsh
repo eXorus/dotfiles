@@ -20,6 +20,7 @@ alias serve="php artisan serve"
 # Codeception
 alias c="./vendor/bin/codecept"
 alias cr="clear && c clean && c run"
+alias crf="c run -g failed"
 
 # Cloudflare Access
 alias ot="$HOME/Code/wat/bin/open-tunnel"
