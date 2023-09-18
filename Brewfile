@@ -33,6 +33,7 @@ cask 'tableplus'
 cask 'visual-studio-code'
 cask 'phpstorm'
 cask 'sublime-text'
+cask 'spotify'
 
 # Fonts
 cask 'font-lato'
