@@ -11,3 +11,14 @@ echo "memory_limit=-1" >> /Users/$USER/Library/Application\ Support/Herd/config/
 
 open --background -a Docker
 open --background -a Proxyman
+
+
+xattr -d com.apple.quarantine /Applications/Spotify.app
+xattr -d com.apple.quarantine /Applications/Docker.app
+xattr -d com.apple.quarantine /Applications/Postman.app
+xattr -d com.apple.quarantine /Applications/Herd.app
+xattr -d com.apple.quarantine /Applications/Proxyman.app
+xattr -d com.apple.quarantine /Applications/TablePlus.app
+xattr -d com.apple.quarantine /Applications/Visual\ Studio\ Code.app
+xattr -d com.apple.quarantine /Applications/Sublime\ Text.app
+xattr -d com.apple.quarantine /Applications/PhpStorm.app
