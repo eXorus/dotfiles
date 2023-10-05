@@ -101,7 +101,7 @@ if ask "Should I generate a new SSH Key for GitHub?"; then
   wait
 fi
 
-DOTFILES_DIR=$HOME/.dotfiles2
+DOTFILES_DIR=$HOME/.dotfiles
 
 echo " "
 echo "${YELLOW}Cloning the dotfiles repository... ${RESET}"
@@ -140,6 +140,21 @@ if ask "Should I install the apps and tools?"; then
   # Install all our dependencies with bundle (See Brewfile)
   brew tap homebrew/bundle
   brew bundle --file $DOTFILES_DIR/Brewfile
+
+  echo "memory_limit=-1" >> /Users/$USER/Library/Application\ Support/Herd/config/php/82/php.ini
+
+  open --background -a Docker
+  open --background -a Proxyman
+
+  xattr -d com.apple.quarantine /Applications/Spotify.app
+  xattr -d com.apple.quarantine /Applications/Docker.app
+  xattr -d com.apple.quarantine /Applications/Postman.app
+  xattr -d com.apple.quarantine /Applications/Herd.app
+  xattr -d com.apple.quarantine /Applications/Proxyman.app
+  xattr -d com.apple.quarantine /Applications/TablePlus.app
+  xattr -d com.apple.quarantine /Applications/Visual\ Studio\ Code.app
+  xattr -d com.apple.quarantine /Applications/Sublime\ Text.app
+  xattr -d com.apple.quarantine /Applications/PhpStorm.app
 fi
 
 if ! command -v omz &> /dev/null; then
