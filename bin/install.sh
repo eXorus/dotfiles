@@ -40,7 +40,7 @@ display_section() {
     # Afficher la bannière avec le texte coloré et le fond de couleur
     printf "\n\n"
     printf "%s" "$(tput setab 3)"  # Définir la couleur de fond
-    printf "%s%s%s\n" "$(tput setaf 0) $section_number/4 $(tput sgr0) $text"
+    printf "%s%s%s\n" "$(tput setaf 0) $section_number/5 $(tput sgr0) $text"
     printf "\n"
 }
 
@@ -69,6 +69,7 @@ echo "${BULLET} 1- Generate your SSH Key for GitHub access"
 echo "${BULLET} 2- Install Homebrew, the package manager for macOS, and use it to install essential tools and apps"
 echo "${BULLET} 3- Clone the necessary GitHub repositories"
 echo "${BULLET} 4- Set up some useful aliases for your convenience"
+echo "${BULLET} 5- Set up the apps"
 
 
 
@@ -240,3 +241,74 @@ if ask "Should I install aliases and paths?"; then
   ln -s $DOTFILES_DIR/.zshrc $HOME/.zshrc
 
 fi
+
+# ----------------------------------------------
+# SECTION 4: SSH Key
+# ----------------------------------------------
+display_section "Set up the apps" 5
+
+
+echo " "
+echo "${RED}Actions to take in iTerm:${RESET}"
+echo "If you are painfully moving the cursor one char at a time with arrow keys, replace the key mapping presets with natural text editing."
+echo "Settings > Profiles > Keys > Key Mappings > Change the preset to Natural Text Editing"
+open -a iTerm
+
+wait
+
+echo " "
+echo "${RED}Actions to take in Slack:${RESET}"
+echo "Ask your credentials to @Bob in Slack channel #pxt-bob, with these commands:"
+echo "@Bob send my DB credentials for staging"
+echo "@Bob send my Cloudflare-Access credentials"
+open -a Slack
+
+wait
+
+echo " "
+echo "${RED}Actions to take in Proxyman:${RESET}"
+echo "Import the script file that will pass the Cloudflare Client Id and Cloudflare Secret each time you visit a domain *.openclassrooms.tech."
+echo "https://www.notion.so/openclassrooms/Starter-Kit-d8805117553949ffa320bb581d3c5596?pvs=4#7f57356db4c54b84b01b28e0f69de8f9"
+open -a Proxyman
+
+wait
+
+echo " "
+echo "${RED}Actions to take in Postman:${RESET}"
+echo "Import the collection and the 3 env files from UtilityScripts"
+echo "https://www.notion.so/openclassrooms/Starter-Kit-d8805117553949ffa320bb581d3c5596?pvs=4#0a7e4f61291f4737aae6db50e3d7f0d3"
+open -a Postman
+
+wait
+
+echo " "
+echo "${RED}Actions to take in TablePlus:${RESET}"
+echo "Download & Import the configuration"
+echo "https://www.notion.so/openclassrooms/Starter-Kit-d8805117553949ffa320bb581d3c5596?pvs=4#e528aa1dc71f4472bbaddf344c01ce3b"
+open -a TablePlus
+
+wait
+
+cat >> $HOME/.aws/config << 'END'
+[profile openclassrooms-sso-staging]
+sso_start_url = https://ocr.awsapps.com/start
+sso_region = eu-west-1
+sso_account_id = 464102534243
+sso_role_name = QualityEngineeringQe
+region = eu-west-3
+output = json
+END
+
+echo " "
+echo "${RED}Actions to take in WAT .env file:${RESET}"
+echo "Replace the configuration"
+echo "https://www.notion.so/openclassrooms/Starter-Kit-d8805117553949ffa320bb581d3c5596?pvs=4#227b4db6d04546fba0c6e52ce874cf43"
+open -a $HOME/Code/wat/.env
+
+wait
+
+
+echo " "
+echo "${RED}FINISHED LET'S DO SOME CHECKS${RESET}"
+
+wait
