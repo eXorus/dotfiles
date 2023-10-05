@@ -166,6 +166,8 @@ if ! command -v omz &> /dev/null; then
     echo " "
     echo "${YELLOW}Installing omz... ${RESET}"
       /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
+
+      # kill le script donc voir comment le gérer?
   fi
 else
   echo " "
