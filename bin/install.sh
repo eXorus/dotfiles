@@ -142,6 +142,9 @@ if ask "Should I install the apps and tools?"; then
   brew tap homebrew/bundle
   brew bundle --file $DOTFILES_DIR/Brewfile
 
+
+  # ajouter un if et retester
+
   echo "memory_limit=-1" >> /Users/$USER/Library/Application\ Support/Herd/config/php/82/php.ini
 
   open --background -a Docker
