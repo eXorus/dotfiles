@@ -200,6 +200,7 @@ if ask "Should I clone the most used git repositories?"; then
       mkdir "$CODE"
     fi
     git clone git@github.com:OpenClassrooms/WebAcceptanceTests.git $CODE/wat
+    # ne fonctionne pas car composer pas actif
     $(cd $CODE/wat && composer install)
   fi
 
