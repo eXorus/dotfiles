@@ -200,8 +200,7 @@ if ask "Should I clone the most used git repositories?"; then
       mkdir "$CODE"
     fi
     git clone git@github.com:OpenClassrooms/WebAcceptanceTests.git $CODE/wat
-    # ne fonctionne pas car composer pas actif
-    $(cd $CODE/wat && composer install)
+    $(cd $CODE/wat && $HOME/Library/Application\ Support/Herd/bin/composer install)
   fi
 
   if ask_clone_repo "simpleit/SdZv4" ${SITES}/openclassrooms.com "the repository for the web platform"; then
