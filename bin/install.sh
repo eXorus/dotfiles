@@ -1,12 +1,13 @@
 #!/bin/sh
 
 # Define color codes
-RED='\033[1;31m'
-GREEN='\033[1;32m'
-YELLOW='\033[1;33m'
-GRAY='\033[90m'
-RESET='\033[0m'
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+GRAY=$(tput setaf 8)
+RESET=$(tput sgr0)
 BULLET="${YELLOW}•${RESET}"
+
 
 ring_bell() {
   # Use the shell's audible bell.
