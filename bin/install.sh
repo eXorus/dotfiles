@@ -1,11 +1,11 @@
 #!/bin/sh
 
 # Define color codes
-RED="\033[1;31m"
-GREEN="\033[1;32m"
-YELLOW="\033[1;33m"
+RED='\033[1;31m'
+GREEN='\033[1;32m'
+YELLOW='\033[1;33m'
 GRAY='\033[90m'
-RESET="\033[0m"
+RESET='\033[0m'
 BULLET="${YELLOW}•${RESET}"
 
 ring_bell() {
