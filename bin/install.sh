@@ -135,6 +135,7 @@ fi
 echo " "
 echo "${RED}Actions to take:${RESET}"
 echo "Review the file ${DOTFILES_DIR}/Brewfile to add apps or tools that you want or remove those you don't need."
+open ${DOTFILES_DIR}/Brewfile
 
 wait
 
@@ -243,7 +244,9 @@ if ask "Should I install aliases and paths?"; then
   echo " "
   echo "${RED}Actions to take:${RESET}"
   echo "- Please review the file ${DOTFILES_DIR}/aliases.zsh to customize your aliases according to your needs."
+  open ${DOTFILES_DIR}/aliases.zsh
   echo "- Please review the file ${DOTFILES_DIR}/paths.zsh to customize your paths according to your needs."
+  open ${DOTFILES_DIR}/paths.zsh
 
   wait
 
