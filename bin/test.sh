@@ -1,6 +1,6 @@
 
-GREEN='\\033[1;32m'
-RESET='\\033[0m'
+GREEN=$(tput setaf 2)
+RESET=$(tput sgr0)
 
 echo "\\033[1;32mThis should be green\\033[0m"
 
