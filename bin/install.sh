@@ -66,7 +66,7 @@ echo "Get ready to supercharge your Mac setup!"
 echo " "
 
 echo "${YELLOW}This script will assist you in the following tasks:${RESET}"
-echo "${BULLET} AGenerate your SSH Key for GitHub access"
+echo "${BULLET} Generate your SSH Key for GitHub access"
 echo "${BULLET} Install Homebrew, the package manager for macOS, and use it to install essential tools and apps"
 echo "${BULLET} Clone the necessary GitHub repositories"
 echo "${BULLET} Set up some useful aliases for your convenience"
