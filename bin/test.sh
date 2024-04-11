@@ -1,8 +1,8 @@
 
-GREEN='\033[1;32m'
-RESET='\033[0m'
+GREEN='\\033[1;32m'
+RESET='\\033[0m'
 
-echo "\033[1;32mThis should be green\033[0m"
+echo "\\033[1;32mThis should be green\\033[0m"
 
 
 
