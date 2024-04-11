@@ -20,6 +20,7 @@ brew 'svn' # Needed to install fonts
 brew 'node'
 
 # Apps
+cask 'iterm2'
 cask 'docker'
 cask 'firefox'
 cask 'github'
