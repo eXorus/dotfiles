@@ -144,13 +144,17 @@ if ask "Should I install the apps and tools?"; then
   brew tap homebrew/bundle
   brew bundle --file $DOTFILES_DIR/Brewfile
 
-
-  # ajouter un if et retester
-
-  echo "memory_limit=-1" >> /Users/$USER/Library/Application\ Support/Herd/config/php/82/php.ini
-
   open --background -a Docker
+  open --background -a Herd
   open --background -a Proxyman
+
+  echo " "
+  echo "${RED}Actions to take:${RESET}"
+  echo "3 apps has been open Docker, Herd, Proxyman please check them"
+  wait
+  
+  echo "memory_limit=-1" >> /Users/$USER/Library/Application\ Support/Herd/config/php/82/php.ini
+  echo "memory_limit=-1" >> /Users/$USER/Library/Application\ Support/Herd/config/php/83/php.ini
 
   xattr -d com.apple.quarantine /Applications/Spotify.app
   xattr -d com.apple.quarantine /Applications/Docker.app
