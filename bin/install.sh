@@ -114,6 +114,7 @@ git clone git@github.com:exorus/dotfiles.git $DOTFILES_DIR
 # SECTION 2: Apps and Tools
 # ----------------------------------------------
 display_section "Apps and Tools" 2
+sudo spctl --master-disable
 
 if ! command -v brew &> /dev/null; then 
 
@@ -175,7 +176,6 @@ else
   echo "${YELLOW}Updating omz... ${RESET}"
   omz update
 fi
-
 
 
 # ----------------------------------------------
@@ -316,5 +316,5 @@ wait
 
 echo " "
 echo "${RED}FINISHED LET'S DO SOME CHECKS${RESET}"
-
+sudo spctl --master-enable
 wait
