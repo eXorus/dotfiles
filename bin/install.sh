@@ -135,7 +135,7 @@ fi
 echo " "
 echo "${RED}Actions to take:${RESET}"
 echo "Review the file ${DOTFILES_DIR}/Brewfile to add apps or tools that you want or remove those you don't need."
-open ${DOTFILES_DIR}/Brewfile
+open -e ${DOTFILES_DIR}/Brewfile
 
 wait
 
@@ -146,12 +146,12 @@ if ask "Should I install the apps and tools?"; then
   brew bundle --file $DOTFILES_DIR/Brewfile
 
   open --background -a Docker
-  open --background -a Herd
+  open -a Herd
   open --background -a Proxyman
 
   echo " "
   echo "${RED}Actions to take:${RESET}"
-  echo "3 apps has been open Docker, Herd, Proxyman please check them"
+  echo "The three apps (Docker, Herd, Proxyman) have just opened. Please accept the various pop-ups and setup configurations."
   wait
   
   echo "memory_limit=-1" >> /Users/$USER/Library/Application\ Support/Herd/config/php/82/php.ini
@@ -244,9 +244,9 @@ if ask "Should I install aliases and paths?"; then
   echo " "
   echo "${RED}Actions to take:${RESET}"
   echo "- Please review the file ${DOTFILES_DIR}/aliases.zsh to customize your aliases according to your needs."
-  open ${DOTFILES_DIR}/aliases.zsh
+  open -e ${DOTFILES_DIR}/aliases.zsh
   echo "- Please review the file ${DOTFILES_DIR}/paths.zsh to customize your paths according to your needs."
-  open ${DOTFILES_DIR}/paths.zsh
+  open -e ${DOTFILES_DIR}/paths.zsh
 
   wait
 
