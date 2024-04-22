@@ -265,6 +265,8 @@ echo " "
 echo "Actions to take in ${YELLOW}iTerm${RESET}:"
 echo "If you are painfully moving the cursor one char at a time with arrow keys, replace the key mapping presets with natural text editing."
 echo "Settings > Profiles > Keys > Key Mappings > Change the preset to Natural Text Editing"
+echo "Change for unlimited scrollback"
+echo "Settings > Profiles > Terminal > Check Unlimited scrollback"
 open -a iTerm
 
 wait
