@@ -291,7 +291,7 @@ wait
 echo " "
 echo "Actions to take in ${YELLOW}Postman${RESET}:"
 echo "Import the collection and the 3 env files from UtilityScripts"
-echo "https://www.notion.so/openclassrooms/Starter-Kit-d8805117553949ffa320bb581d3c5596?pvs=4#0a7e4f61291f4737aae6db50e3d7f0d3"
+echo "https://www.notion.so/openclassrooms/Starter-Kit-d8805117553949ffa320bb581d3c5596?pvs=4#f0c60d7d49f645259177a5189ca827ae"
 open -a Postman
 
 wait
@@ -299,7 +299,7 @@ wait
 echo " "
 echo "Actions to take in ${YELLOW}TablePlus${RESET}:"
 echo "Download & Import the configuration"
-echo "https://www.notion.so/openclassrooms/Starter-Kit-d8805117553949ffa320bb581d3c5596?pvs=4#e528aa1dc71f4472bbaddf344c01ce3b"
+echo "https://www.notion.so/openclassrooms/Starter-Kit-d8805117553949ffa320bb581d3c5596?pvs=4#e172ac6e1c4f4755a3461dfd382924ff"
 open -a TablePlus
 
 wait
