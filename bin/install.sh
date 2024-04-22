@@ -283,7 +283,7 @@ wait
 echo " "
 echo "Actions to take in ${YELLOW}Proxyman${RESET}:"
 echo "Import the script file that will pass the Cloudflare Client Id and Cloudflare Secret each time you visit a domain *.openclassrooms.tech."
-echo "https://www.notion.so/openclassrooms/Starter-Kit-d8805117553949ffa320bb581d3c5596?pvs=4#7f57356db4c54b84b01b28e0f69de8f9"
+echo "https://www.notion.so/openclassrooms/Starter-Kit-d8805117553949ffa320bb581d3c5596?pvs=4#c54df5eb87b542e59137cab754415a77"
 open -a Proxyman
 
 wait
