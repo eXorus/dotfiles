@@ -262,7 +262,7 @@ display_section "Set up the apps" 5
 
 
 echo " "
-echo "${RED}Actions to take in iTerm:${RESET}"
+echo "Actions to take in ${YELLOW}iTerm${RESET}:"
 echo "If you are painfully moving the cursor one char at a time with arrow keys, replace the key mapping presets with natural text editing."
 echo "Settings > Profiles > Keys > Key Mappings > Change the preset to Natural Text Editing"
 open -a iTerm
@@ -270,7 +270,7 @@ open -a iTerm
 wait
 
 echo " "
-echo "${RED}Actions to take in Slack:${RESET}"
+echo "Actions to take in ${YELLOW}Slack${RESET}:"
 echo "Ask your credentials to @Bob in Slack channel #pxt-bob, with these commands:"
 echo "@Bob send my DB credentials for staging"
 echo "@Bob send my Cloudflare-Access credentials"
@@ -279,7 +279,7 @@ open -a Slack
 wait
 
 echo " "
-echo "${RED}Actions to take in Proxyman:${RESET}"
+echo "Actions to take in ${YELLOW}Proxyman${RESET}:"
 echo "Import the script file that will pass the Cloudflare Client Id and Cloudflare Secret each time you visit a domain *.openclassrooms.tech."
 echo "https://www.notion.so/openclassrooms/Starter-Kit-d8805117553949ffa320bb581d3c5596?pvs=4#7f57356db4c54b84b01b28e0f69de8f9"
 open -a Proxyman
@@ -287,7 +287,7 @@ open -a Proxyman
 wait
 
 echo " "
-echo "${RED}Actions to take in Postman:${RESET}"
+echo "Actions to take in ${YELLOW}Postman${RESET}:"
 echo "Import the collection and the 3 env files from UtilityScripts"
 echo "https://www.notion.so/openclassrooms/Starter-Kit-d8805117553949ffa320bb581d3c5596?pvs=4#0a7e4f61291f4737aae6db50e3d7f0d3"
 open -a Postman
@@ -295,7 +295,7 @@ open -a Postman
 wait
 
 echo " "
-echo "${RED}Actions to take in TablePlus:${RESET}"
+echo "Actions to take in ${YELLOW}TablePlus${RESET}:"
 echo "Download & Import the configuration"
 echo "https://www.notion.so/openclassrooms/Starter-Kit-d8805117553949ffa320bb581d3c5596?pvs=4#e528aa1dc71f4472bbaddf344c01ce3b"
 open -a TablePlus
@@ -311,9 +311,11 @@ sso_role_name = QualityEngineeringQe
 region = eu-west-3
 output = json
 END
+echo " "
+echo "${YELLOW}AWS Config${RESET} updated"
 
 echo " "
-echo "${RED}Actions to take in WAT .env file:${RESET}"
+echo "Actions to take in ${YELLOW}WAT .env file${RESET}:"
 echo "Replace the configuration"
 echo "https://www.notion.so/openclassrooms/Starter-Kit-d8805117553949ffa320bb581d3c5596?pvs=4#227b4db6d04546fba0c6e52ce874cf43"
 open -a $HOME/Code/wat/.env
@@ -321,7 +323,7 @@ open -a $HOME/Code/wat/.env
 wait
 
 
-echo " "
-echo "${RED}FINISHED LET'S DO SOME CHECKS${RESET}"
 sudo spctl --master-enable
+echo " "
+echo "${GREEN}FINISHED LET'S DO SOME CHECKS${RESET}"
 wait
