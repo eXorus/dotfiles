@@ -108,3 +108,15 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+cmagik() {
+    sed -i '' "s/^JIRA=\\\".*\\\"/JIRA=\\\"$1\\\"/" .env
+    cr --env stage-oc "${@:2}"
+}
+
+brup () {
+    brew update
+    brew upgrade
+    brew cleanup
+    rm -rf $(brew --cache)
+}
+
