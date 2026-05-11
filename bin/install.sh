@@ -147,11 +147,10 @@ if ask "Should I install the apps and tools?"; then
 
   open --background -a Docker
   open -a Herd
-  open --background -a Proxyman
 
   echo " "
   echo "${RED}Actions to take:${RESET}"
-  echo "The three apps (Docker, Herd, Proxyman) have just opened. Please accept the various pop-ups and setup configurations."
+  echo "The apps (Docker, Herd) have just opened. Please accept the various pop-ups and setup configurations."
   wait
   
   echo "memory_limit=-1" >> /Users/$USER/Library/Application\ Support/Herd/config/php/82/php.ini
@@ -161,7 +160,6 @@ if ask "Should I install the apps and tools?"; then
   xattr -d com.apple.quarantine /Applications/Docker.app
   xattr -d com.apple.quarantine /Applications/Postman.app
   xattr -d com.apple.quarantine /Applications/Herd.app
-  xattr -d com.apple.quarantine /Applications/Proxyman.app
   xattr -d com.apple.quarantine /Applications/TablePlus.app
   xattr -d com.apple.quarantine /Applications/Visual\ Studio\ Code.app
   xattr -d com.apple.quarantine /Applications/Sublime\ Text.app
@@ -281,14 +279,6 @@ open -a Slack
 wait
 
 echo " "
-echo "Actions to take in ${YELLOW}Proxyman${RESET}:"
-echo "Import the script file that will pass the Cloudflare Client Id and Cloudflare Secret each time you visit a domain *.openclassrooms.tech."
-echo "https://www.notion.so/openclassrooms/Starter-Kit-d8805117553949ffa320bb581d3c5596?pvs=4#c54df5eb87b542e59137cab754415a77"
-open -a Proxyman
-
-wait
-
-echo " "
 echo "Actions to take in ${YELLOW}Postman${RESET}:"
 echo "Import the collection and the 3 env files from UtilityScripts"
 echo "https://www.notion.so/openclassrooms/Starter-Kit-d8805117553949ffa320bb581d3c5596?pvs=4#f0c60d7d49f645259177a5189ca827ae"
@@ -303,18 +293,6 @@ echo "https://www.notion.so/openclassrooms/Starter-Kit-d8805117553949ffa320bb581
 open -a TablePlus
 
 wait
-
-cat >> $HOME/.aws/config << 'END'
-[profile openclassrooms-sso-staging]
-sso_start_url = https://ocr.awsapps.com/start
-sso_region = eu-west-1
-sso_account_id = 464102534243
-sso_role_name = QualityEngineeringQe
-region = eu-west-3
-output = json
-END
-echo " "
-echo "${YELLOW}AWS Config${RESET} updated"
 
 echo " "
 echo "Actions to take in ${YELLOW}WAT .env file${RESET}:"

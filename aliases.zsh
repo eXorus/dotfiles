@@ -29,6 +29,7 @@ alias ct="$HOME/Code/wat/bin/close-tunnel"
 
 # PHP
 alias cfresh="rm -rf vendor/ composer.lock && composer i"
+alias cf="composer format"
 
 # JS
 alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
@@ -45,10 +46,11 @@ alias gcm="git checkout main"
 alias gcb="git checkout -b"
 alias gco="git checkout"
 alias gc="git commit -m"
+alias gca="git commit --amend --no-edit"
 alias gpf="git push --force-with-lease"
 alias gd="git diff"
 alias gda="git diff ."
 alias nah="git reset --hard;git clean -df;"
 alias gl="git pull"
 alias gp="git push"
-
+alias gr="git rebase origin/main"
